@@ -3,8 +3,8 @@ body {
 }
 
 .cell {
-    height: 30px;
-    width: 30px;
+    height: 90px;
+    width: 90px;
     border: 1.5px solid grey;
     border-style: inset;
 }
@@ -15,4 +15,9 @@ body {
 
 .whitecell {
     background-color: white;
+}
+
+span{
+    color: green;
+    font-size: 30px;
 }
