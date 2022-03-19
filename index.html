@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess_Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <span>chess_game</span>
+    <br><br>
+
+    <script type="text/javascript">
+        //create a center tag to center all the elements
+        var center = document.createElement('center');
+
+        //create a table element
+        var chesstable = document.createElement('table');
+        for (var i=0; i<8; i++){
+            
+            //create a row
+            var tr = document.createElement('tr');
+            for (var j = 0; i<8; j++){
+                
+                //create a cell
+                var td = document.createElement('td');
+
+                //if the sum of cell coordinates is even 
+                // then color the cell white
+                if ((i+j) % 2 == 0) {
+                    // create a class atribute for all white cell
+                    td.setAttribute('class', 'cell whitecell');
+                    tr.appendChild(td);
+                }
+                //if the sum of cell coordinates is odd then
+                //color the cell black
+                else{
+
+                    //create a class atribute for all black cells
+                    td.setAttribute('class','cell blackcell');
+
+                    //append the cell to its row
+
+                    tr.appendChild(td);
+                }
+            }
+
+            //append the row
+            chesstable.appendChild(tr);
+
+        }
+        center.appendChild(chesstable);
+
+        //modyfiying table atribute properties
+        chesstable.setattribute('cellspacing', '0');
+        chesstable.setattribute('width', '270px');
+        document.body.appendChild(center);
+    </script>
+</body>
+</html>
